@@ -9,8 +9,8 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 const APP_ROUTES: Routes  = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'cursos/', component: CursosComponent },
-    { path: 'cursos/:id', component: CursoDetalheComponent },
+    { path: 'cursos', component: CursosComponent },
+    { path: 'curso/:id', component: CursoDetalheComponent },
 
 ];
 

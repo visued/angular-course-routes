@@ -16,8 +16,8 @@ export class CursosComponent implements OnInit {
   inscricao: Subscription;
 
   constructor(private cursosService: CursosService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.cursos = this.cursosService.getCursos();
@@ -33,7 +33,7 @@ export class CursosComponent implements OnInit {
   proximaPagina() {
     //this.pagina++;
     this.router.navigate(['/cursos'],
-    {queryParams: {'pagina': ++this.pagina}})
+      { queryParams: { 'pagina': ++this.pagina } })
   }
 
 }

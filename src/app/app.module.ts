@@ -25,8 +25,8 @@ import { AlunosModule } from './alunos/alunos.module';
   imports: [
     BrowserModule,
     CursosModule,
+    AlunosModule,
     AppRoutingModule,
-    AlunosModule
   //  routing
   ],
   providers: [

@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 // import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 
 const appRoutes: Routes  = [
+    { path: 'cursos', loadChildren: 'src/app/cursos/cursos.module#CursosModule'},
+    { path: 'alunos', loadChildren: 'src/app/alunos/alunos.module#AlunosModule'},
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
     // { path: 'cursos', component: CursosComponent },

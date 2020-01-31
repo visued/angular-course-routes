@@ -8,8 +8,8 @@ export class AlunosGuard implements CanActivateChild {
 
     canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean>| boolean {
         if(state.url.includes('editar')){
-            alert('o usuário não tem permissão para editar!')
-            return false;
+            //alert('o usuário não tem permissão para editar!')
+            //return false;
         }
 
         return true;

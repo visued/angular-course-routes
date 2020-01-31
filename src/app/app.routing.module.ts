@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { CursosGuard } from './guards/cursos.guard';
 import { AlunosGuard } from './guards/alunos.guard';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 // import { CursosComponent } from './cursos/cursos.component';
 // import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 // import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
@@ -17,6 +18,8 @@ const appRoutes: Routes  = [
     { path: 'alunos', loadChildren: 'src/app/alunos/alunos.module#AlunosModule', canActivate: [AuthGuard], canActivateChild: [AlunosGuard], canLoad: [AuthGuard]},
     { path: '', component: HomeComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent },
+    { path: '**', component: PaginaNaoEncontradaComponent },
+
     // { path: 'cursos', component: CursosComponent },
     // { path: 'curso/:id', component: CursoDetalheComponent },
     // { path: 'nao-encontrado', component: CursoNaoEncontradoComponent },
